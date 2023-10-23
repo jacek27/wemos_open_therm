@@ -41,3 +41,17 @@ For reference try https://github.com/arthurrump/esphome-opentherm/blob/main/exam
 The shiled should be assembled as a hat for ESP8266 / ESP wemos kits.
 The cable connector should align with USB socket. 
 ![OTShield](docs/otwemos.jpg)
+
+# Boiler connection 
+OpenTherm is a 2 wire bus, you should connect the pins on the shield to corespondiong pins in the boiler. 
+![BoilerConnection](docs/ot_pwhs.png)
+
+# Disclamer 
+
+By using this electronics project, you acknowledge and accept that there are inherent risks associated with working with electronic components, circuits, and devices. You agree to assume all such risks and agree to use appropriate safety precautions.
+
+The creators and contributors to this project have made efforts to ensure the accuracy and reliability of the information provided. However, they cannot guarantee that the information is error-free or that the project will work as intended in every circumstance.
+
+The shield project is provided on an "as-is" basis. The creators and contributors to this project make no representations or warranties, either express or implied, including but not limited to, any warranties of merchantability or fitness for a particular purpose.
+
+In no event shall the creators, contributors, or sponsors of this project be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) arising in any way out of the use of the project.
