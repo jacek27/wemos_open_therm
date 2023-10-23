@@ -39,7 +39,9 @@ For reference try https://github.com/arthurrump/esphome-opentherm/blob/main/exam
 
 # Assembly
 The shiled should be assembled as a hat for ESP8266 / ESP wemos kits.
-The cable connector should align with USB socket. 
+The cable connector should align with USB socket.
+Please see ![schematic](https://github.com/jacek27/wemos_open_therm/blob/main/top.pdf) for specific pinout.
+
 ![OTShield](docs/otwemos.jpg)
 
 # Boiler connection 
