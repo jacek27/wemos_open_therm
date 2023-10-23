@@ -46,7 +46,7 @@ The cable connector should align with USB socket.
 OpenTherm is a 2 wire bus, you should connect the pins on the shield to corespondiong pins in the boiler. 
 ![BoilerConnection](docs/ot_pwhs.png)
 
-# Disclamer 
+# Disclaimer  
 
 By using this electronics project, you acknowledge and accept that there are inherent risks associated with working with electronic components, circuits, and devices. You agree to assume all such risks and agree to use appropriate safety precautions.
 
