@@ -42,6 +42,8 @@ The shield should be assembled as a hat for ESP8266 / ESP wemos kits.
 The cable connector should align with USB socket.
 Please see ![schematic](https://github.com/jacek27/wemos_open_therm/blob/main/top.pdf) for specific pinout.
 
+Example shows wemos with USB C connector, for MicroUSB version please consult pinout
+
 ![OTShield](docs/otwemos.jpg)
 
 # Boiler connection 
