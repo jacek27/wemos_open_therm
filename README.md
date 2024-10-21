@@ -11,23 +11,68 @@ Program the device with the shield disconnected
 5. Edit the newly created device
 6. Insert the following code below the generated code
     ```
+
     external_components:
-    source: github://arthurrump/esphome-opentherm@main
-
+      - source: github://olegtarasov/esphome-opentherm
+    
     opentherm:
-    in_pin: 5
-    out_pin: 4
-    ch_enable: true
-    dhw_enable: true
-
+      in_pin: 4
+      out_pin: 5
+    
+    
+    switch:
+      - platform: opentherm
+        ch_enable:
+          id: ot_ch_enable
+          name: "Central Heating enabled"
+          restore_mode: RESTORE_DEFAULT_OFF
+        dhw_enable:
+          id: ot_dhw_enable
+          name: "Hot Water enabled"
+          restore_mode: RESTORE_DEFAULT_OFF
+    
+    
+    number:
+      - platform: opentherm
+        t_set:
+          id: ot_setpoint
+          name: "Heating setpoint"
+          min_value: 22
+          max_value: 40
+          restore_value: true
+          initial_value: 25
+    
+        t_dhw_set:
+          id: dhw_setpoint
+          name: "Hot Water target temperature"
+          min_value: 25
+          max_value: 50
+          restore_value: true
+          initial_value: 42
+    
     sensor:
-    - platform: opentherm
+      - platform: opentherm
         rel_mod_level:
-        name: "Boiler Relative modulation level"
+          id: ot_rel_mod_level
+          name: "Boiler Relative modulation level"
         t_boiler:
-        name: "Boiler water temperature"
-        t_ret:
-        name: "Boiler Return water temperature"
+          id: boilotron_temperature_ch
+          name: "Boiler Feed Temperature"
+    
+    
+    binary_sensor:
+      - platform: opentherm
+        ch_active:
+          id: ot_ch_active
+          name: "Boiler Central Heating active"
+        dhw_active:
+          id: ot_dhw_active
+          name: "Boiler Hot Water active"
+        flame_on:
+          id: ot_boiler_flame_on
+          name: "Boiler Flame on"
+
+    # Based on https://olegtarasov.me/opentherm-thermostat-esphome/
     ```
 7. Press save and then install button
 8. Press and hold the reset button and then plug in the wemos device esp8266 / esp32 via a USB cable
